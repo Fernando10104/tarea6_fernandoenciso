@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-title">Proyecto Multimedia</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="imagen.html">Imágenes</a></li>
+                    <li><a href="audio.html" class="active">Audio</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="embebido.html">Embebido</a></li>
+                    <li><a href="opcional.html">Opcional</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Reproductor de Audio</h1>
+        
+        <div class="audio-container">
+            <div class="audio-item">
+                <h3>Audio de Ejemplo 1</h3>
+                <audio controls>
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                    <source src="https://file-examples.com/storage/fe86832739e1220bf62f133/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="audio-controls">
+                    <button class="download-btn" onclick="downloadAudio('https://file-examples.com/storage/fe86832739e1220bf62f133/2017/11/file_example_MP3_700KB.mp3', 'audio1.mp3')">
+                        Descargar MP3
+                    </button>
+                </div>
+            </div>
+            
+            <div class="audio-item">
+                <h3>Audio de Ejemplo 2</h3>
+                <audio controls>
+                    <source src="https://www.soundjay.com/misc/sounds/fail-buzzer-02.wav" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="audio-controls">
+                    <button class="download-btn" onclick="downloadAudio('https://www.soundjay.com/misc/sounds/fail-buzzer-02.wav', 'audio2.wav')">
+                        Descargar WAV
+                    </button>
+                </div>
+            </div>
+            
+            <div class="audio-item">
+                <h3>Audio de Ejemplo 3</h3>
+                <audio controls>
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-04.wav" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="audio-controls">
+                    <button class="download-btn" onclick="downloadAudio('https://www.soundjay.com/misc/sounds/bell-ringing-04.wav', 'audio3.wav')">
+                        Descargar WAV
+                    </button>
+                </div>
+            </div>
+            
+            <div class="audio-item">
+                <h3>Audio HTML5 Demo</h3>
+                <audio controls>
+                    <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeywFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeSwFJXfH8N+QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwEJHbG8N2OQAoXXrTp66pWFApGn+DyvWIcBDuV2O7JfCwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/Jeg==" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="audio-controls">
+                    <button class="download-btn" onclick="alert('Este es un audio de demostración incorporado')">
+                        Audio Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Opcional - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-title">Proyecto Multimedia</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="imagen.html">Imágenes</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="embebido.html">Embebido</a></li>
+                    <li><a href="opcional.html" class="active">Opcional</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Contenido Multimedia Opcional</h1>
+        
+        <div class="optional-container">
+            <!-- Canvas Interactive -->
+            <section class="optional-item">
+                <h3>Canvas Interactivo</h3>
+                <div class="canvas-container">
+                    <canvas id="drawCanvas" width="600" height="400"></canvas>
+                    <div class="canvas-controls">
+                        <button onclick="clearCanvas()">Limpiar</button>
+                        <button onclick="changeColor('red')">Rojo</button>
+                        <button onclick="changeColor('blue')">Azul</button>
+                        <button onclick="changeColor('green')">Verde</button>
+                        <button onclick="saveCanvas()">Guardar Como Imagen</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SVG Animado -->
+            <section class="optional-item">
+                <h3>Gráfico SVG Animado</h3>
+                <div class="svg-container">
+                    <svg width="400" height="300" viewBox="0 0 400 300">
+                        <circle cx="200" cy="150" r="50" fill="#3498db">
+                            <animateTransform 
+                                attributeName="transform" 
+                                type="rotate" 
+                                values="0 200 150; 360 200 150" 
+                                dur="3s" 
+                                repeatCount="indefinite"/>
+                        </circle>
+                        <rect x="50" y="100" width="80" height="80" fill="#e74c3c">
+                            <animate 
+                                attributeName="opacity" 
+                                values="1; 0.3; 1" 
+                                dur="2s" 
+                                repeatCount="indefinite"/>
+                        </rect>
+                        <polygon points="350,50 380,120 320,120" fill="#f39c12">
+                            <animateTransform 
+                                attributeName="transform" 
+                                type="scale" 
+                                values="1; 1.5; 1" 
+                                dur="2.5s" 
+                                repeatCount="indefinite"/>
+                        </polygon>
+                        <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="20" fill="#2c3e50">
+                            Gráficos SVG Animados
+                        </text>
+                    </svg>
+                </div>
+            </section>
+            
+            <!-- WebGL/Three.js Simulado -->
+            <section class="optional-item">
+                <h3>Modelo 3D (Simulado)</h3>
+                <div class="threejs-container">
+                    <div id="threejs-scene" class="scene-3d">
+                        <div class="cube-3d">
+                            <div class="face front">Front</div>
+                            <div class="face back">Back</div>
+                            <div class="face right">Right</div>
+                            <div class="face left">Left</div>
+                            <div class="face top">Top</div>
+                            <div class="face bottom">Bottom</div>
+                        </div>
+                    </div>
+                    <p>Cubo 3D CSS (En un proyecto real usarías Three.js o WebGL)</p>
+                </div>
+            </section>
+            
+            <!-- Reproductor de Música con Playlist -->
+            <section class="optional-item">
+                <h3>Reproductor Musical con Playlist</h3>
+                <div class="music-player">
+                    <div class="player-display">
+                        <h4 id="currentSong">Selecciona una canción</h4>
+                        <audio id="musicPlayer" controls>
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                    <div class="playlist">
+                        <h5>Playlist:</h5>
+                        <ul id="songList">
+                            <li onclick="playSong('Canción Demo 1', 'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeywFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeSwFJXfH8N+QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwEJHbG8N2OQAoXXrTp66pWFApGn+DyvWIcBDuV2O7JfCwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/Jeg==')">Canción Demo 1</li>
+                            <li onclick="playSong('Canción Demo 2', 'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeywFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeSwFJXfH8N+QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwEJHbG8N2OQAoXXrTp66pWFApGn+DyvWIcBDuV2O7JfCwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/JeiwFJXfH8N2QQAoUXrTp66hVFApGn+DyvmIcBDuR1+/Jeg==')">Canción Demo 2</li>
+                            <li onclick="playSong('Sonido de Ejemplo', 'https://www.soundjay.com/misc/sounds/bell-ringing-05.wav')">Sonido de Ejemplo</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos MP4 - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-title">Proyecto Multimedia</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="imagen.html">Imágenes</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html" class="active">Videos</a></li>
+                    <li><a href="embebido.html">Embebido</a></li>
+                    <li><a href="opcional.html">Opcional</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Videos MP4</h1>
+        
+        <div class="video-container">
+            <div class="video-item">
+                <h3>Video de Ejemplo 1</h3>
+                <video controls width="100%">
+                    <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button class="download-btn" onclick="downloadVideo('https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4', 'video1.mp4')">
+                        Descargar Video
+                    </button>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <h3>Video de Ejemplo 2</h3>
+                <video controls width="100%">
+                    <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_640x360_1mb.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button class="download-btn" onclick="downloadVideo('https://sample-videos.com/zip/10/mp4/SampleVideo_640x360_1mb.mp4', 'video2.mp4')">
+                        Descargar Video
+                    </button>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <h3>Video HTML5 Demo</h3>
+                <video controls width="100%" poster="https://picsum.photos/640/360">
+                    <!-- Video de demostración usando Big Buck Bunny -->
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button class="download-btn" onclick="downloadVideo('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', 'big_buck_bunny.mp4')">
+                        Descargar Video
+                    </button>
+                </div>
+            </div>
+            
+            <div class="video-item">
+                <h3>Video Corto de Prueba</h3>
+                <video controls width="100%">
+                    <!-- Video de prueba más pequeño -->
+                    <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button class="download-btn" onclick="downloadVideo('https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4', 'sample.mp4')">
+                        Descargar Video
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

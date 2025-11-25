@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-title">Proyecto Multimedia</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="imagen.html" class="active">Imágenes</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="embebido.html">Embebido</a></li>
+                    <li><a href="opcional.html">Opcional</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Galería de Imágenes</h1>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=1" alt="Imagen 1">
+                <div class="gallery-overlay">
+                    <h3>Imagen 1</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=1', 'imagen1.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=2" alt="Imagen 2">
+                <div class="gallery-overlay">
+                    <h3>Imagen 2</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=2', 'imagen2.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=3" alt="Imagen 3">
+                <div class="gallery-overlay">
+                    <h3>Imagen 3</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=3', 'imagen3.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=4" alt="Imagen 4">
+                <div class="gallery-overlay">
+                    <h3>Imagen 4</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=4', 'imagen4.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=5" alt="Imagen 5">
+                <div class="gallery-overlay">
+                    <h3>Imagen 5</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=5', 'imagen5.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=6" alt="Imagen 6">
+                <div class="gallery-overlay">
+                    <h3>Imagen 6</h3>
+                    <button class="download-btn" onclick="downloadImage('https://picsum.photos/800/600?random=6', 'imagen6.jpg')">
+                        Descargar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
